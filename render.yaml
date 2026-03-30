@@ -1,0 +1,39 @@
+services:
+  - type: web_service
+    name: etpms-ai-service
+    env: docker
+    branch: main
+    dockerfilePath: ai-service/Dockerfile
+    plan: starter
+    envVars:
+      - key: PORT
+        value: "8000"
+
+  - type: web_service
+    name: etpms-backend
+    env: docker
+    branch: main
+    dockerfilePath: BACKEND/ETPMS/Dockerfile
+    plan: starter
+    envVars:
+      - key: PORT
+        value: "8080"
+      - key: AI_SERVICE_URL
+        value: "https://your-ai-service.onrender.com"
+      - key: SPRING_DATASOURCE_URL
+        value: "jdbc:mysql://<MYSQL_HOST>:3306/etpms_db?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true"
+      - key: SPRING_DATASOURCE_USERNAME
+        value: "root"
+      - key: SPRING_DATASOURCE_PASSWORD
+        value: "root"
+      - key: SPRING_JPA_HIBERNATE_DDL_AUTO
+        value: "update"
+
+  - type: static_site
+    name: etpms-frontend
+    env: node
+    branch: main
+    root: FRONTEND/eptms
+    plan: starter
+    buildCommand: npm install && npm run build
+    publishPath: build

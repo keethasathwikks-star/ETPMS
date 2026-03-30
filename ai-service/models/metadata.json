@@ -1,0 +1,16 @@
+{
+  "timestamp": "2026-03-16T09:31:56.567220",
+  "models": [
+    "performance_predictor.pkl",
+    "task_predictor.pkl",
+    "employee_clusterer.pkl",
+    "employee_recommender.pkl"
+  ],
+  "scalers": [
+    "performance_scaler.pkl",
+    "task_scaler.pkl",
+    "clustering_scaler.pkl",
+    "recommender_scaler.pkl"
+  ],
+  "version": "1.0"
+}
