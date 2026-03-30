@@ -2,7 +2,7 @@ services:
   - type: web_service
     name: etpms-ai-service
     env: docker
-    branch: main
+    branch: master
     dockerfilePath: ai-service/Dockerfile
     plan: starter
     envVars:
@@ -12,7 +12,7 @@ services:
   - type: web_service
     name: etpms-backend
     env: docker
-    branch: main
+    branch: master
     dockerfilePath: BACKEND/ETPMS/Dockerfile
     plan: starter
     envVars:
@@ -32,7 +32,7 @@ services:
   - type: static_site
     name: etpms-frontend
     env: node
-    branch: main
+    branch: master
     root: FRONTEND/eptms
     plan: starter
     buildCommand: npm install && npm run build
