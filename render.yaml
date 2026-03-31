@@ -3,6 +3,7 @@ services:
     name: etpms-ai-service
     env: docker
     branch: master
+    dockerContext: ai-service
     dockerfilePath: ai-service/Dockerfile
     plan: starter
     envVars:
@@ -13,6 +14,7 @@ services:
     name: etpms-backend
     env: docker
     branch: master
+    dockerContext: BACKEND/ETPMS
     dockerfilePath: BACKEND/ETPMS/Dockerfile
     plan: starter
     envVars:
