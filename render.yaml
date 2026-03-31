@@ -23,11 +23,11 @@ services:
       - key: CORS_ALLOWED_ORIGIN
         value: "https://etpms-frontend.onrender.com"
       - key: SPRING_DATASOURCE_URL
-        value: "jdbc:mysql://<MYSQL_HOST>:3306/etpms_db?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true"
+        value: "jdbc:postgresql://dpg-d75k57gule4c73csfjq0-a:5432/etpms_db"
       - key: SPRING_DATASOURCE_USERNAME
-        value: "root"
+        value: "etpms_db_user"
       - key: SPRING_DATASOURCE_PASSWORD
-        value: "root"
+        value: "qnSE5zWqOWh2AUi0oD8YC7jNGWyEikjy"
       - key: SPRING_JPA_HIBERNATE_DDL_AUTO
         value: "update"
 
