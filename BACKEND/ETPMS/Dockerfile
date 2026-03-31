@@ -3,12 +3,8 @@ FROM maven:3.9.9-eclipse-temurin-21 as build
 WORKDIR /app
 
 COPY BACKEND/ETPMS/pom.xml .
-COPY BACKEND/ETPMS/mvnw .
-COPY BACKEND/ETPMS/.mvn ./.mvn
-RUN chmod +x mvnw
-
 COPY BACKEND/ETPMS/src ./src
-RUN ./mvnw -B package -DskipTests
+RUN mvn -B package -DskipTests
 
 # Runtime stage
 FROM eclipse-temurin:21-jre-jammy
