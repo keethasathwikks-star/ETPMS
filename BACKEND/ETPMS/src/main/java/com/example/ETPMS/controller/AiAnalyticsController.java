@@ -17,7 +17,6 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api/ai")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "http://localhost:3000")
 public class AiAnalyticsController {
 
     private final AiAnalyticsService aiAnalyticsService;
