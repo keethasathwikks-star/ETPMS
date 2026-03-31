@@ -122,9 +122,32 @@ body {
   color: #7f1d1d;
 }
 
+.status-badge.warming,
 .status-badge.loading {
   background: #fbbf24;
   color: #78350f;
+}
+
+.health-message {
+  margin: 12px 0 0;
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+.secondary-btn {
+  margin-top: 14px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  background: rgba(15, 23, 42, 0.45);
+  color: #e2e8f0;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.secondary-btn:hover {
+  background: rgba(30, 41, 59, 0.75);
+  border-color: rgba(148, 163, 184, 0.55);
 }
 
 .tabs {

@@ -4,7 +4,7 @@ import Dashboard from './pages/Dashboard';
 import EmployeeManagement from './pages/EmployeeManagement';
 import TaskManagement from './pages/TaskManagement';
 import PerformanceReviewPage from './pages/PerformanceReview';
-import AIAnalytics from './pages/AIAnalytics';
+import AIAnalytics from './pages/AIAnalyticsRender';
 import './App.css';
 
 /**
